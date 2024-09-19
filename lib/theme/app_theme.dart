@@ -3,7 +3,48 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTheme {
   //Theme
-  var theme = ThemeData(scaffoldBackgroundColor: Colors.white);
+  var theme = ThemeData(
+      scaffoldBackgroundColor: Colors.white,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedLabelStyle: TextStyle(
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.bold,
+          fontSize: 10.sp,
+          color: const Color.fromRGBO(64, 191, 254, 1),
+          letterSpacing: 0.5,
+          height: 1.5,
+        ),
+        unselectedLabelStyle: TextStyle(
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.normal,
+          fontSize: 10.sp,
+          color: const Color.fromRGBO(144, 152, 176, 1),
+          letterSpacing: 0.5,
+          height: 1.5,
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        errorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(251, 112, 128, 1)),
+        ),
+        disabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(235, 240, 255, 1)),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(235, 240, 255, 1)),
+        ),
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(64, 191, 254, 1)),
+        ),
+        hintStyle: TextStyle(
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.normal,
+          fontSize: 12.sp,
+          color: const Color.fromRGBO(144, 152, 176, 1),
+          letterSpacing: 0.5,
+          height: 1.8,
+        ),
+      ));
 
   //Sizes
   late final double screenHeight;

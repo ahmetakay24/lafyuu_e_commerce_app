@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lafyuu_e_commerce_app/core/widgets/buttons/app_buttons.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key, required this.appTheme});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key, required this.appTheme});
 
   final AppTheme appTheme;
 
@@ -15,11 +15,9 @@ class LoginView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(
-                flex: 112,
+                flex: 155,
               ),
               Expanded(flex: 72, child: Image.asset("assets/images/logo/lafyuu_icon.png")),
               const Spacer(
@@ -28,20 +26,36 @@ class LoginView extends StatelessWidget {
               Expanded(
                   flex: 24,
                   child: Text(
-                    "Welcome to Lafyuu",
+                    "Let’s Get Started",
                     style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
                   )),
               const Spacer(
                 flex: 8,
               ),
               Expanded(
-                  flex: 24,
+                  flex: 22,
                   child: Text(
-                    "Sign in to continue",
+                    "Create an new account",
                     style: appTheme.bodyNormalRegular,
                   )),
               const Spacer(
                 flex: 28,
+              ),
+              Expanded(
+                  flex: 48,
+                  child: TextFormField(
+                    cursorColor: appTheme.primaryBlue,
+                    decoration: InputDecoration(
+                      hintText: "Full Name",
+                      prefixIcon: const Icon(
+                        Icons.person_2_outlined,
+                      ),
+                      prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                          states.contains(WidgetState.focused) ? appTheme.primaryBlue : appTheme.neutralGrey),
+                    ),
+                  )),
+              const Spacer(
+                flex: 8,
               ),
               Expanded(
                   flex: 48,
@@ -73,71 +87,28 @@ class LoginView extends StatelessWidget {
                     ),
                   )),
               const Spacer(
-                flex: 16,
+                flex: 8,
               ),
               Expanded(
-                flex: 57,
-                child: LargePrimaryButton(
-                  appTheme: appTheme,
-                  buttonText: "Sign In",
-                  onPressed: () {},
-                ),
-              ),
-              const Spacer(
-                flex: 21,
-              ),
-              Expanded(
-                  flex: 21,
-                  child: Row(
-                    children: [
-                      Expanded(
-                        flex: 5,
-                        child: Divider(
-                          thickness: 1,
-                          height: 1,
-                          color: appTheme.neutralLight,
-                        ),
+                  flex: 48,
+                  child: TextFormField(
+                    cursorColor: appTheme.primaryBlue,
+                    decoration: InputDecoration(
+                      hintText: "Password Again",
+                      prefixIcon: const Icon(
+                        Icons.lock_outline,
                       ),
-                      const Spacer(),
-                      Expanded(
-                        child: Center(
-                          child: Text(
-                            "OR",
-                            style: appTheme.bodyMediumBold,
-                          ),
-                        ),
-                      ),
-                      const Spacer(),
-                      Expanded(
-                        flex: 5,
-                        child: Divider(
-                          thickness: 1,
-                          height: 1,
-                          color: appTheme.neutralLight,
-                        ),
-                      )
-                    ],
+                      prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                          states.contains(WidgetState.focused) ? appTheme.primaryBlue : appTheme.neutralGrey),
+                    ),
                   )),
               const Spacer(
                 flex: 16,
               ),
-              Expanded(flex: 57, child: GoogleButton(appTheme: appTheme)),
-              const Spacer(
-                flex: 8,
-              ),
-              Expanded(flex: 57, child: FacebookButton(appTheme: appTheme)),
-              const Spacer(
-                flex: 16,
-              ),
               Expanded(
-                flex: 23,
-                child: Text(
-                  "Forgot Password?",
-                  style: appTheme.linkText,
-                ),
-              ),
+                  flex: 57, child: LargePrimaryButton(appTheme: appTheme, buttonText: "Sign Up", onPressed: () {})),
               const Spacer(
-                flex: 8,
+                flex: 24,
               ),
               Expanded(
                   flex: 24,
@@ -145,18 +116,18 @@ class LoginView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text("Don’t have a account?", style: appTheme.bodyNormalRegular),
+                      Text("have a account?", style: appTheme.bodyNormalRegular),
                       Padding(
                         padding: const EdgeInsets.only(left: 4),
                         child: Text(
-                          "Register",
+                          "Sign In",
                           style: appTheme.bodyNormalBold.copyWith(color: appTheme.primaryBlue),
                         ),
                       )
                     ],
                   )),
               const Spacer(
-                flex: 100,
+                flex: 149,
               ),
             ],
           ),

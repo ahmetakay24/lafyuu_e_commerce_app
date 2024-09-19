@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
+import 'package:flutter/widgets.dart'; // Added import for WidgetStateProperty
 
 class LargeSecondaryButton extends StatelessWidget {
   const LargeSecondaryButton({
@@ -49,7 +50,7 @@ class LargePrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
         backgroundColor: Colors.blue,
@@ -57,6 +58,17 @@ class LargePrimaryButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
         minimumSize: Size(appTheme.screenWidth, 46.8),
+        elevation: 5,
+        shadowColor: appTheme.primaryBlue.withOpacity(0.5),
+      ).copyWith(
+        overlayColor: WidgetStateProperty.resolveWith<Color?>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.pressed)) {
+              return Colors.blue.withOpacity(0.8);
+            }
+            return null;
+          },
+        ),
       ),
       child: Text(
         buttonText,
@@ -83,12 +95,23 @@ class SmallPrimaryButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {},
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5)),
+              ),
+              minimumSize: const Size(99, 46.8),
+              elevation: 5,
+              shadowColor: appTheme.primaryBlue.withOpacity(0.5))
+          .copyWith(
+        overlayColor: WidgetStateProperty.resolveWith<Color?>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.pressed)) {
+              return Colors.blue.withOpacity(0.8);
+            }
+            return null;
+          },
         ),
-        minimumSize: const Size(99, 46.8),
       ),
       child: Text(
         buttonText,
