@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lafyuu_e_commerce_app/core/functions/app_functions.dart';
 
 class AppTheme {
+  
   //Theme
   var theme = ThemeData(
       scaffoldBackgroundColor: Colors.white,
@@ -50,9 +52,15 @@ class AppTheme {
   late final double screenHeight;
   late final double screenWidth;
 
+  //Paddings
+  late final double heightDynamicPadding16;
+  late final double widthDynamicPadding16;
+
   AppTheme(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
+    heightDynamicPadding16 = sizeCalculator(MediaQuery.of(context).size.height, 1.97);
+    widthDynamicPadding16 = sizeCalculator(MediaQuery.of(context).size.width, 4.26);
   }
 
   //Colors
