@@ -61,20 +61,86 @@ class MainScreenView extends StatelessWidget {
                                   padding: EdgeInsets.only(
                                       left: appTheme.widthDynamicPadding16 * 1.5,
                                       top: sizeCalculator(appTheme.screenHeight, 16.37)),
-                                      //Countdown saati boyutu editlenecek
-                                  child: AspectRatio(
-                                    aspectRatio: 150 / 41,
+                                  child: SizedBox(
+                                    height: sizeCalculator(appTheme.screenHeight, 5.04),
+                                    width: sizeCalculator(appTheme.screenWidth, 39.99),
                                     child: Row(
                                       children: [
                                         Expanded(
                                             flex: 41,
                                             child: Container(
-                                              color: Colors.white,
+                                              decoration: BoxDecoration(
+                                                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                                              child: Center(
+                                                  child: Text(
+                                                "08",
+                                                style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
+                                              )),
                                             )),
-                                        const Expanded(flex: 12, child: Row()),
-                                        Expanded(flex: 41, child: Container()),
-                                        const Expanded(flex: 12, child: Row()),
-                                        Expanded(flex: 12, child: Container())
+                                        const Expanded(
+                                            flex: 12,
+                                            child: Column(
+                                              children: [
+                                                Spacer(
+                                                  flex: 3,
+                                                ),
+                                                Expanded(
+                                                    child: CircleAvatar(
+                                                  backgroundColor: Colors.white,
+                                                )),
+                                                Spacer(),
+                                                Expanded(
+                                                    child: CircleAvatar(
+                                                  backgroundColor: Colors.white,
+                                                )),
+                                                Spacer(
+                                                  flex: 3,
+                                                )
+                                              ],
+                                            )),
+                                        Expanded(
+                                            flex: 41,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                                              child: Center(
+                                                  child: Text(
+                                                "34",
+                                                style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
+                                              )),
+                                            )),
+                                        const Expanded(
+                                            flex: 12,
+                                            child: Column(
+                                              children: [
+                                                Spacer(
+                                                  flex: 3,
+                                                ),
+                                                Expanded(
+                                                    child: CircleAvatar(
+                                                  backgroundColor: Colors.white,
+                                                )),
+                                                Spacer(),
+                                                Expanded(
+                                                    child: CircleAvatar(
+                                                  backgroundColor: Colors.white,
+                                                )),
+                                                Spacer(
+                                                  flex: 3,
+                                                )
+                                              ],
+                                            )),
+                                        Expanded(
+                                            flex: 41,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                                              child: Center(
+                                                  child: Text(
+                                                "52",
+                                                style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
+                                              )),
+                                            )),
                                       ],
                                     ),
                                   ),
