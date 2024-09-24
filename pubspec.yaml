@@ -43,7 +43,7 @@ dependencies:
   #Responsive
   flutter_screenutil: ^5.9.3
 
-  #PageIndicator
+  #Widgets
   smooth_page_indicator: ^1.2.0+3
   
 
