@@ -40,11 +40,14 @@ dependencies:
   #Testing
   device_preview: ^1.2.0
 
-  #Responsive
+  #ResponsiveText
   flutter_screenutil: ^5.9.3
 
   #Widgets
   smooth_page_indicator: ^1.2.0+3
+
+  #Cache
+  cached_network_image: ^3.4.1
   
 
 dev_dependencies:
@@ -73,6 +76,8 @@ flutter:
   assets:
     - assets/images/logo/
     - assets/images/icons/
+    - assets/images/product_pictures/
+    - assets/images/promotion_images/
     - assets/fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
-import 'package:flutter/widgets.dart'; // Added import for WidgetStateProperty
+// Added import for WidgetStateProperty
 
 class LargeSecondaryButton extends StatelessWidget {
   const LargeSecondaryButton({
