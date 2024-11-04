@@ -1,63 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lafyuu_e_commerce_app/core/functions/app_functions.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-class MainScreenAppBar extends StatelessWidget {
-  const MainScreenAppBar({
-    super.key,
-    required this.appTheme,
-  });
-
-  final AppTheme appTheme;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: sizeCalculator(appTheme.screenHeight, 9.60),
-      child: Column(
-        children: [
-          const Spacer(
-            flex: 16,
-          ),
-          Expanded(
-            flex: 46,
-            child: Row(
-              children: [
-                const Spacer(
-                  flex: 16,
-                ),
-                Expanded(
-                    flex: 263,
-                    child: TextFormField(
-                      cursorColor: appTheme.primaryBlue,
-                      decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.search),
-                          hintText: "Search Product",
-                          prefixIconColor: appTheme.primaryBlue),
-                    )),
-                const Spacer(
-                  flex: 16,
-                ),
-                Expanded(flex: 24, child: Image.asset("assets/images/icons/love.png")),
-                const Spacer(
-                  flex: 16,
-                ),
-                Expanded(flex: 24, child: Image.asset("assets/images/icons/notification.png")),
-                const Spacer(
-                  flex: 16,
-                ),
-              ],
-            ),
-          ),
-          const Spacer(
-            flex: 16,
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class PromotionBannerPageIndicator extends StatelessWidget {
   const PromotionBannerPageIndicator({
