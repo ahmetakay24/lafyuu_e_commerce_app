@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:lafyuu_e_commerce_app/core/functions/app_functions.dart';
-import 'package:lafyuu_e_commerce_app/screens/main_screen/view/widgets/buttons/main_screen_buttons.dart';
+import 'package:lafyuu_e_commerce_app/core/widgets/buttons/app_buttons.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
 
 class PromotionBannerPageView extends StatelessWidget {

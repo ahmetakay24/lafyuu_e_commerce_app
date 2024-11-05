@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lafyuu_e_commerce_app/core/functions/app_functions.dart';
 
 class AppTheme {
+  
   //Theme
   var theme = ThemeData(
       scaffoldBackgroundColor: Colors.white,
