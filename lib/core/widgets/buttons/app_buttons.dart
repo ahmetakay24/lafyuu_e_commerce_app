@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lafyuu_e_commerce_app/core/functions/app_functions.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
-// Added import for WidgetStateProperty
 
 class LargeSecondaryButton extends StatelessWidget {
   const LargeSecondaryButton({
@@ -116,7 +115,7 @@ class SmallPrimaryButton extends StatelessWidget {
       ),
       child: Text(
         buttonText,
-        style: appTheme.bodyMediumBold.copyWith(color: Colors.white),
+        style: appTheme.bodyNormalBold.copyWith(color: Colors.white),
       ),
     );
   }
