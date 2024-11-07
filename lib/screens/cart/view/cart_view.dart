@@ -28,25 +28,41 @@ class CartView extends StatelessWidget {
             Expanded(flex: 272, child: ListView()),
             Expanded(
                 flex: 56,
-                child: Row(
-                  children: [
-                    Expanded(
+                child: Container(
+                  decoration: const BoxDecoration(shape: BoxShape.rectangle),
+                  child: Row(
+                    children: [
+                      Expanded(
                         flex: 256,
-                        //Enter Cupon kısmını bağlaman lazım
                         child: TextFormField(
                           decoration: const InputDecoration(
-                              hintText: "Enter Cupon Code",
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    bottomLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(0),
-                                    bottomRight: Radius.circular(0)),
-                              )),
-                        )),
-                    Expanded(
-                        flex: 87, child: SmallPrimaryButton(appTheme: appTheme, buttonText: "Apply", onPressed: () {}))
-                  ],
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
+                            errorBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                            ),
+                            disabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const Expanded(
+                          flex: 87,
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(5),
+                                bottomRight: Radius.circular(5),
+                              ),
+                              child: ElevatedButton(onPressed: null, child: Text("Apply"))))
+                    ],
+                  ),
                 )),
             const Spacer(
               flex: 16,
