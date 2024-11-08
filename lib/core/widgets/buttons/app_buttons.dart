@@ -53,7 +53,7 @@ class LargePrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 64, 191, 255),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
@@ -64,7 +64,7 @@ class LargePrimaryButton extends StatelessWidget {
         overlayColor: WidgetStateProperty.resolveWith<Color?>(
           (Set<WidgetState> states) {
             if (states.contains(WidgetState.pressed)) {
-              return Colors.blue.withOpacity(0.8);
+              return const Color.fromARGB(255, 64, 191, 255).withOpacity(0.8);
             }
             return null;
           },
@@ -96,7 +96,7 @@ class SmallPrimaryButton extends StatelessWidget {
       onPressed: () {},
       style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
-              backgroundColor: Colors.blue,
+              backgroundColor: const Color.fromARGB(255, 64, 191, 255),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
@@ -107,7 +107,7 @@ class SmallPrimaryButton extends StatelessWidget {
         overlayColor: WidgetStateProperty.resolveWith<Color?>(
           (Set<WidgetState> states) {
             if (states.contains(WidgetState.pressed)) {
-              return Colors.blue.withOpacity(0.8);
+              return const Color.fromARGB(255, 64, 191, 255).withOpacity(0.8);
             }
             return null;
           },

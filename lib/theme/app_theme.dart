@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lafyuu_e_commerce_app/core/functions/app_functions.dart';
 
 class AppTheme {
-  
   //Theme
   var theme = ThemeData(
       scaffoldBackgroundColor: Colors.white,
@@ -143,7 +142,7 @@ class AppTheme {
   TextStyle heading6 = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.bold,
-    fontSize: 10.sp,
+    fontSize: 12.sp,
     color: const Color.fromRGBO(144, 152, 176, 1),
     letterSpacing: 0.5,
     height: 1.5,
