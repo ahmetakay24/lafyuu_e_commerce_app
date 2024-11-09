@@ -62,3 +62,7 @@ To run this project, follow these steps:
 ```bash
   flutter run
 ```
+
+## Screenshots
+
+![Screenshot 1](https://i.hizliresim.com/dldj2ey.png)
