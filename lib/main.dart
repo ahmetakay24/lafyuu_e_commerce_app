@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lafyuu_e_commerce_app/screens/cart/view/cart_view.dart';
+import 'package:lafyuu_e_commerce_app/screens/offer/view/offer_view.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Lafyuu',
             theme: appTheme.theme,
-            home: CartView(
+            home: OfferView(
               appTheme: appTheme,
             ));
       },

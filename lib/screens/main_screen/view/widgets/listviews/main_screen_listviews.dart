@@ -23,112 +23,128 @@ class PromotionBannerPageView extends StatelessWidget {
       child: PageView(
         controller: controller,
         children: [
-          Stack(
-            children: [
-              SizedBox(
-                width: double.infinity,
-                height: double.infinity,
-                child: CachedNetworkImage(
-                  imageUrl: promotionBanners.first,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: appTheme.heightDynamicPadding16 * 2, left: appTheme.widthDynamicPadding16 * 1.5),
-                child: Text(
-                  "Super Flash Sale \n%50 Off",
-                  style: appTheme.heading2.copyWith(color: Colors.white),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: appTheme.widthDynamicPadding16 * 1.5, top: sizeCalculator(appTheme.screenHeight, 16.37)),
-                child: SizedBox(
-                  height: sizeCalculator(appTheme.screenHeight, 5.04),
-                  width: sizeCalculator(appTheme.screenWidth, 39.99),
-                  child: Row(
-                    children: [
-                      Expanded(
-                          flex: 41,
-                          child: Container(
-                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
-                            child: Center(
-                                child: Text(
-                              "08",
-                              style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
-                            )),
-                          )),
-                      const Expanded(
-                          flex: 12,
-                          child: Column(
-                            children: [
-                              Spacer(
-                                flex: 3,
-                              ),
-                              Expanded(
-                                  child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                              )),
-                              Spacer(),
-                              Expanded(
-                                  child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                              )),
-                              Spacer(
-                                flex: 3,
-                              )
-                            ],
-                          )),
-                      Expanded(
-                          flex: 41,
-                          child: Container(
-                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
-                            child: Center(
-                                child: Text(
-                              "34",
-                              style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
-                            )),
-                          )),
-                      const Expanded(
-                          flex: 12,
-                          child: Column(
-                            children: [
-                              Spacer(
-                                flex: 3,
-                              ),
-                              Expanded(
-                                  child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                              )),
-                              Spacer(),
-                              Expanded(
-                                  child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                              )),
-                              Spacer(
-                                flex: 3,
-                              )
-                            ],
-                          )),
-                      Expanded(
-                          flex: 41,
-                          child: Container(
-                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
-                            child: Center(
-                                child: Text(
-                              "52",
-                              style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
-                            )),
-                          )),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          )
+          FlashSaleBanner(promotionBanners: promotionBanners, appTheme: appTheme)
         ],
       ),
+    );
+  }
+}
+
+class FlashSaleBanner extends StatelessWidget {
+  const FlashSaleBanner({
+    super.key,
+    required this.promotionBanners,
+    required this.appTheme,
+  });
+
+  final List<String> promotionBanners;
+  final AppTheme appTheme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        SizedBox(
+          width: double.infinity,
+          height: double.infinity,
+          child: CachedNetworkImage(
+            imageUrl: promotionBanners.first,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+              top: appTheme.heightDynamicPadding16 * 2, left: appTheme.widthDynamicPadding16 * 1.5),
+          child: Text(
+            "Super Flash Sale \n%50 Off",
+            style: appTheme.heading2.copyWith(color: Colors.white),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+              left: appTheme.widthDynamicPadding16 * 1.5, top: sizeCalculator(appTheme.screenHeight, 16.37)),
+          child: SizedBox(
+            height: sizeCalculator(appTheme.screenHeight, 5.04),
+            width: sizeCalculator(appTheme.screenWidth, 39.99),
+            child: Row(
+              children: [
+                Expanded(
+                    flex: 41,
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                      child: Center(
+                          child: Text(
+                        "08",
+                        style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
+                      )),
+                    )),
+                const Expanded(
+                    flex: 12,
+                    child: Column(
+                      children: [
+                        Spacer(
+                          flex: 3,
+                        ),
+                        Expanded(
+                            child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                        )),
+                        Spacer(),
+                        Expanded(
+                            child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                        )),
+                        Spacer(
+                          flex: 3,
+                        )
+                      ],
+                    )),
+                Expanded(
+                    flex: 41,
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                      child: Center(
+                          child: Text(
+                        "34",
+                        style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
+                      )),
+                    )),
+                const Expanded(
+                    flex: 12,
+                    child: Column(
+                      children: [
+                        Spacer(
+                          flex: 3,
+                        ),
+                        Expanded(
+                            child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                        )),
+                        Spacer(),
+                        Expanded(
+                            child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                        )),
+                        Spacer(
+                          flex: 3,
+                        )
+                      ],
+                    )),
+                Expanded(
+                    flex: 41,
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
+                      child: Center(
+                          child: Text(
+                        "52",
+                        style: appTheme.heading4.copyWith(color: appTheme.neutralDark),
+                      )),
+                    )),
+              ],
+            ),
+          ),
+        )
+      ],
     );
   }
 }
