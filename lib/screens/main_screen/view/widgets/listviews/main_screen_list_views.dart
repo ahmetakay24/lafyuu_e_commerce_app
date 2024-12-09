@@ -22,9 +22,7 @@ class PromotionBannerPageView extends StatelessWidget {
       aspectRatio: 343 / 206,
       child: PageView(
         controller: controller,
-        children: [
-          FlashSaleBanner(promotionBanners: promotionBanners, appTheme: appTheme)
-        ],
+        children: [FlashSaleBanner(promotionBanners: promotionBanners, appTheme: appTheme)],
       ),
     );
   }
@@ -53,8 +51,8 @@ class FlashSaleBanner extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(
-              top: appTheme.heightDynamicPadding16 * 2, left: appTheme.widthDynamicPadding16 * 1.5),
+          padding:
+              EdgeInsets.only(top: appTheme.heightDynamicPadding16 * 2, left: appTheme.widthDynamicPadding16 * 1.5),
           child: Text(
             "Super Flash Sale \n%50 Off",
             style: appTheme.heading2.copyWith(color: Colors.white),

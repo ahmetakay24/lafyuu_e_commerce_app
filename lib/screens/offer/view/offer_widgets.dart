@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lafyuu_e_commerce_app/core/widgets/sections/app_sections.dart';
-import 'package:lafyuu_e_commerce_app/screens/main_screen/view/widgets/listviews/main_screen_listviews.dart';
+import 'package:lafyuu_e_commerce_app/screens/main_screen/view/widgets/listviews/main_screen_list_views.dart';
 import 'package:lafyuu_e_commerce_app/screens/offer/view/widgets/offer_view_widgets.dart';
 import 'package:lafyuu_e_commerce_app/theme/app_theme.dart';
 
